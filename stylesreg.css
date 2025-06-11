@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f0f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #0066cc;
+}
+
+.note {
+  color: red;
+  font-size: 0.9em;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+}
+
+.captcha-box {
+  background: #dff;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.info {body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #d9f1fb, #ffffff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+h2 {
+  color: #1a75cf;
+}
+
+.note {
+  color: red;
+  font-style: italic;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #f90;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d77f00;
+}
+
+.captcha-box,
+#captchaImage {
+  border: 1px solid #999;
+  padding: 10px;
+  background: #e8fff0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons .btn {
+  margin: 5px;
+}
+
+  margin-top: 20px;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #f90;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #d77f00;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Registration - Online Banking</title>
+  <link rel="stylesheet" href="stylesreg.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>User Driven Registration - New User</h2>
+    <p class="note">Mandatory fields are marked with an asterisk (*)</p>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      
+      <label>Account Number *</label>
+      <input type="text" id="accountNumber" placeholder="Enter Account Number" required />
+
+      <label>CIF Number *</label>
+      <input type="text" id="cifNumber" placeholder="Enter CIF Number" required />
+
+      <label>Branch Code *</label>
+      <div class="inline">
+        <input type="text" id="branchCode" placeholder="5-digit code" maxlength="5" required />
+        <button type="button" onclick="getBranchName()">Get Branch Name</button>
+      </div>
+
+      <label>Country</label>
+      <select id="country" required>
+        <option value="">-- Select Country --</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>Other</option>
+      </select>
+
+      <label>Registered mobile Number *</label>
+      <div class="inline">
+        <input type="tel" id="mobile" placeholder="Enter mobile number" required />
+        <input type="text" disabled />
+      </div>
+
+      <label>Facility Required *</label>
+      <select id="facility" required>
+        <option value="">-- Select Transaction Rights --</option>
+        <option>View Only</option>
+        <option>Full Transaction Rights</option>
+      </select>
+
+      <label>Enter the text as shown in the image *</label>
+      <div class="inline">
+        <input type="text" id="captchaInput" required />
+        <img id="captchaImage" src="captcha.png" alt="CAPTCHA" />
+      </div>
+
+      <p class="info">
+        Dear Customer, After onboarding on SBI Online, the created user ID will be enabled for login
+        through YONO and SBI Online. By clicking on 'I Agree' you give consent for the same. 
+        Please do not share your login credentials.
+      </p>
+
+      <div class="buttons">
+        <button type="submit" class="btn">I Agree</button>
+        <button type="button" class="btn" onclick="disagree()">I Disagree</button>
+	<br><button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script>
+   function validateForm() {
+  // Validate all fields (you can expand this logic)
+  const accountNumber = document.getElementById('accountNumber').value;
+  const cifNumber = document.getElementById('cifNumber').value;
+  const branchCode = document.getElementById('branchCode').value;
+  const mobile = document.getElementById('mobile').value;
+  const captcha = document.getElementById('captchaInput').value;
+
+  if (!accountNumber || !cifNumber || !branchCode || !mobile || !captcha) {
+    alert("Please fill all mandatory fields.");
+    return false;
+  }
+
+  // You can also add a CAPTCHA verification logic here
+
+  // Simulate successful registration
+  alert("Registration successful! Redirecting to login...");
+  window.location.href = "login.html";
+  return false; // prevent actual form submission
+}
+
+function disagree() {
+  alert("You must agree to proceed.");
+  window.location.href = "login.html";
+}
+
+</script>
+</body>
+</html>

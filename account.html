@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Account - OnlineBank</title>
+  <link rel="stylesheet" href="account.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">OnlineBank</div>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="account-summary">
+    <h2>Account Summary</h2>
+    <div class="account-info">
+      <p><strong>Account Number:</strong> <span id="accountNumber">1234567890</span></p>
+      <p><strong>Account Holder:</strong> <span id="accountHolder">Sravani P</span></p>
+      <p><strong>Balance:</strong> ₹<span id="balance">95,000.00</span></p>
+      <p><strong>Account Type:</strong> Savings</p>
+    </div>
+  </section>
+
+  <section class="transactions">
+    <h2>Recent Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Amount (₹)</th>
+          <th>Balance (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="transactionTable">
+        <!-- Dynamic content -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 OnlineBank. All rights reserved.</p>
+  </footer>
+  <script>
+
+  if (!localStorage.getItem('loggedInUser')) {
+    alert("Access denied. Please log in first.");
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

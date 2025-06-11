@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f6fa;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(to right, #d0e9ff, #f0f9ff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #00264d;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.hero .btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background-color: #004080;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.hero .btn:hover {
+  background-color: #003060;
+}
+
+/* Services */
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.service-box {
+  max-width: 280px;
+  text-align: center;
+}
+
+.service-box h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

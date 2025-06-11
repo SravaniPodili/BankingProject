@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activate Your Account - OnlineBank</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e6f0fa;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 450px;
+      margin: 80px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    h2 {
+      text-align: center;
+      color: #003366;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #004aad;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #003080;
+    }
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Activate Your OnlineBank Account</h2>
+    <form id="activateForm" onsubmit="return activateAccount()">
+      <label for="accountNumber">Account Number</label>
+      <input type="text" id="accountNumber" required />
+
+      <label for="mobileNumber">Registered Mobile Number</label>
+      <input type="tel" id="mobileNumber" required />
+
+      <label for="otp">Enter OTP</label>
+      <input type="text" id="otp" required />
+
+      <button type="submit">Activate Account</button>
+
+      <p class="message" id="activationMessage"></p>
+    </form>
+  </div>
+
+  <script>
+    function activateAccount() {
+      const account = document.getElementById('accountNumber').value;
+      const mobile = document.getElementById('mobileNumber').value;
+      const otp = document.getElementById('otp').value;
+      const message = document.getElementById('activationMessage');
+
+      // Example validation (replace with real server-side check)
+      if (account === "1234567890" && otp === "999999") {
+        message.style.color = "green";
+        message.textContent = "Account activated successfully!";
+      } else {
+        message.style.color = "red";
+        message.textContent = "Activation failed. Please check details.";
+      }
+
+      return false; // Prevent form submit for demo
+    }
+  </script>
+</body>
+</html>
