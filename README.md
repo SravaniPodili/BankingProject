@@ -20,4 +20,4 @@ This is a Banking System application that allows users to manage bank accounts, 
 4. Open the frontend in a browser
 
 ## Author
-Your Name
+Sravani Podili
